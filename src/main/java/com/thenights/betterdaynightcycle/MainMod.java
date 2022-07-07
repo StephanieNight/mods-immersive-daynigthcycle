@@ -1,4 +1,4 @@
-package net.thenights.immersiveminecraft;
+package com.thenights.betterdaynightcycle;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -24,7 +24,7 @@ public class MainMod
 {
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
-    public static final String MOD_ID = "immersiveminecraft";
+    public static final String MOD_ID = "betterdaynightcycle";
     public MainMod() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
