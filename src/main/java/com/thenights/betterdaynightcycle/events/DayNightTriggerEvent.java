@@ -1,17 +1,17 @@
 package com.thenights.betterdaynightcycle.events;
 
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.world.GameRules;
+import net.minecraft.world.level.GameRules;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.server.ServerLifecycleHooks;
-import com.thenights.betterdaynightcycle.MainMod;
+import com.thenights.betterdaynightcycle.BetterDayNightCycleMod;
 
+import net.minecraftforge.server.ServerLifecycleHooks;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod.EventBusSubscriber(modid = MainMod.MOD_ID)
+@Mod.EventBusSubscriber(modid = BetterDayNightCycleMod.MODID)
 public class DayNightTriggerEvent {
     private static final Logger LOGGER = LogManager.getLogger();
     @SubscribeEvent
