@@ -3,6 +3,7 @@ package com.thenights.betterdaynightcycle.events;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.level.GameRules;
 import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import com.thenights.betterdaynightcycle.BetterDayNightCycleMod;
@@ -21,6 +22,15 @@ public class DayNightTriggerEvent {
         LOGGER.info("Player: "+ players);
         UpdateCycle(players);
     }
+    // You can use SubscribeEvent and let the Event Bus discover methods to call
+    @SubscribeEvent
+    public static void onServerStarting(ServerStartingEvent event)
+    {
+        // Do something when the server starts
+        LOGGER.info("HELLO from server starting");
+        UpdateCycle(0);
+    }
+
     @SubscribeEvent
     public static void onPlayerLeaveEvent(PlayerEvent.PlayerLoggedOutEvent event) {
         LOGGER.info("Player left");
